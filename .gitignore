@@ -1,0 +1,72 @@
+# =========================
+# ROS / Catkin workspace
+# =========================
+/build/
+/devel/
+/install/
+/log/
+/.catkin_tools/
+/.ros/
+
+# catkin temporary/generated files
+/.catkin_workspace
+
+# =========================
+# CMake / C++ build artifacts
+# =========================
+# generic out-of-source build folders/files (if created in subdirs)
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/CTestTestfile.cmake
+**/CTestConfiguration.ini
+**/CTestCustom.cmake
+**/compile_commands.json
+**/*.o
+**/*.obj
+**/*.so
+**/*.a
+**/*.la
+**/*.lo
+**/*.dylib
+
+# =========================
+# Python artifacts
+# =========================
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# =========================
+# Editor / OS files
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =========================
+# Data and runtime outputs
+# =========================
+/data/*.bag
+/data/**/*.bag
+/fast_localization_map/pcd/
+
+# Keep graphviz source if needed
+!/data/frames.gv

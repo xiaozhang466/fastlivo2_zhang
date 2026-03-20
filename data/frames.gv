@@ -1,0 +1,7 @@
+digraph G {
+"camera_init" -> "aft_mapped"[label="Broadcaster: /laserMapping\nAverage rate: 10.205 Hz\nMost recent transform: 1769413014.365 ( 0.066 sec old)\nBuffer length: 4.899 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1769413014.432"[ shape=plaintext ] ;
+ }->"camera_init";
+}
