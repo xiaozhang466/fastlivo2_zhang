@@ -20,3 +20,5 @@ cd ~/fastlivo2_ws
 source devel/setup.bash
 roslaunch fast_livo run_lslidar_C16.launch
 /left_camera/image
+
+rosbag record -O fastlivo2_test_01.bag /lslidar_point_cloud /IMU_data /left_camera/image
