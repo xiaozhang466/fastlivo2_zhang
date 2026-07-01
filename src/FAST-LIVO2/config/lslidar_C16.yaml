@@ -2,13 +2,16 @@ common:
   img_topic: "/left_camera/image"
   lid_topic: "/lslidar_point_cloud"
   imu_topic: "/IMU_data"
-  img_en: 1
+  img_en: 0
   lidar_en: 1
   ros_driver_bug_fix: false
 
 extrin_calib:
-  extrinsic_T: [0, 0, 0.30]
-  extrinsic_R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+  # LI-Init refinement result: LiDAR -> IMU
+  extrinsic_T: [0.047345, 0.007714, 0.066580]
+  extrinsic_R: [0.999053, -0.043490,  0.001476,
+                0.043487,  0.999052,  0.002233,
+               -0.001572, -0.002166,  0.999996]
   
   # User provided extrinsics
   Rcl: [ -0.056836, -0.998376, -0.003851,
@@ -17,9 +20,9 @@ extrin_calib:
   Pcl: [ -0.008042,  0.068650, -0.017779]
 
 time_offset: 
-  imu_time_offset: 0.0
+  imu_time_offset: -0.028608
   img_time_offset: 0.0
-  lidar_time_offset: -0.02   # 补偿雷达传输延迟，负值表示时间戳比实际采集晚
+  lidar_time_offset: 0.0
   exposure_time_init: 0.0
 
 preprocess:
@@ -66,7 +69,7 @@ local_map:
 
 uav:
   imu_rate_odom: false
-  gravity_align_en: false
+  gravity_align_en: true
 
 publish:
   dense_map_en: true
@@ -81,7 +84,7 @@ evo:
 
 pcd_save:
   pcd_save_en: true
-  type: 2 
+  type: 0 
   colmap_output_en: false 
   filter_size_pcd: 0.15
   interval: -1

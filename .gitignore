@@ -67,6 +67,23 @@ Thumbs.db
 /data/*.bag
 /data/**/*.bag
 /fast_localization_map/pcd/
+/fast_localization_map/pose.json
+
+# FAST-LIVO2 runtime logs and generated outputs
+/src/FAST-LIVO2/Log/*.txt
+/src/FAST-LIVO2/Log/*.pcd
+/src/FAST-LIVO2/Log/Colmap/
+/src/FAST-LIVO2/Log/image/*
+/src/FAST-LIVO2/Log/pcd/*
+/src/FAST-LIVO2/Log/result/*.txt
+
+# Keep placeholders and helper docs/scripts
+!/src/FAST-LIVO2/Log/image/.gitkeep
+!/src/FAST-LIVO2/Log/pcd/.gitkeep
+!/src/FAST-LIVO2/Log/result/.gitkeep
+
+# Local Codex state
+/.codex
 
 # Keep graphviz source if needed
 !/data/frames.gv
