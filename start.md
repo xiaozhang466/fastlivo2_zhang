@@ -22,3 +22,12 @@ source devel/setup.bash
 roslaunch fast_livo run_lslidar_C16.launch
 
 rosbag record -O fastlivo2_test_01.bag /lslidar_point_cloud /IMU_data /left_camera/image
+
+
+# 终端 1
+cd ~/fastlivo2_ws
+source devel/setup.bash
+roslaunch fast_livo mapping_mid360_bag.launch
+
+# 终端 2
+rosbag play /home/ros/ZMG/2026-07-01-17-56-32.bag --clock
